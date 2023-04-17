@@ -1,12 +1,12 @@
 /*
 Loon/Surge
 [Script]
-http-response ^https?://api\.m\.jd\.com/(client\.action|api)\?functionId=(wareBusiness|serverConfig|basicConfig|lite_wareBusiness|pingou_item) requires-body=1,script-path=https://raw.githubusercontent.com/Tartarus2014/Script/master/jd_price_lite.js, tag=京东比价
+http-response ^https?://api\.m\.jd\.com/(client\.action|api)\?functionId=(wareBusiness|serverConfig|basicConfig|lite_wareBusiness|pingou_item) requires-body=1,script-path=https://raw.githubusercontent.com/Lost-f/Script/master/jd_price_lite.js, tag=京东比价
 [MITM]
 hostname = api.m.jd.com
 
 QX:
-^https?://api\.m\.jd\.com/(client\.action|api)\?functionId=(wareBusiness|serverConfig|basicConfig|lite_wareBusiness|pingou_item) url script-response-body https://raw.githubusercontent.com/Tartarus2014/Script/master/jd_price_lite.js
+^https?://api\.m\.jd\.com/(client\.action|api)\?functionId=(wareBusiness|serverConfig|basicConfig|lite_wareBusiness|pingou_item) url script-response-body https://raw.githubusercontent.com/Lost-f/Script/master/jd_price_lite.js
 
 Boxjs订阅：https://raw.githubusercontent.com/githubdulong/Script/master/boxjs.json
 */
@@ -153,7 +153,7 @@ if (url.indexOf(path2) != -1 || url.indexOf(path4) != -1) {
 function lowerMsgs(data) {
     const lower = data.lowerPriceyh;
     const lowerDate = dateFormat(data.lowerDateyh);
-    const lowerMsg = "🍵 历史最低到手价：¥" + String(lower) + ` (${lowerDate}) `;
+    const lowerMsg = "历史最低到手价：¥" + String(lower) + ` (${lowerDate}) `;
     return lowerMsg;
 }
 
